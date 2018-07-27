@@ -1,6 +1,7 @@
 package com.wipro.miliu.View.Activities;
 
 import android.annotation.SuppressLint;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,12 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.wipro.miliu.R;
+import com.wipro.miliu.View.Fragments.Fragment1;
+import com.wipro.miliu.View.Fragments.Fragment2;
+import com.wipro.miliu.View.Fragments.Fragment3;
+import com.wipro.miliu.View.Fragments.Fragment4;
+import com.wipro.miliu.View.Fragments.Fragment5;
+import com.wipro.miliu.View.Fragments.Fragment6;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -106,7 +113,11 @@ public class FullscreenActivity extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
+        fragmentloading();
+
     }
+
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -160,4 +171,39 @@ public class FullscreenActivity extends AppCompatActivity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+
+    private void fragmentloading() {
+
+        Fragment1 fragment1=new Fragment1();
+        Fragment2 fragment2=new Fragment2();
+        Fragment3 fragment3=new Fragment3();
+        Fragment4 fragment4=new Fragment4();
+        Fragment5 fragment5=new Fragment5();
+        Fragment6 fragment6=new Fragment6();
+
+
+
+        FragmentTransaction fragment1Transaction=getSupportFragmentManager().beginTransaction();
+        FragmentTransaction fragment2Transaction=getSupportFragmentManager().beginTransaction();
+        FragmentTransaction fragment3Transaction=getSupportFragmentManager().beginTransaction();
+        FragmentTransaction fragment4Transaction=getSupportFragmentManager().beginTransaction();
+        FragmentTransaction fragment5Transaction=getSupportFragmentManager().beginTransaction();
+        FragmentTransaction fragment6Transaction=getSupportFragmentManager().beginTransaction();
+
+
+        fragment1Transaction.add(R.id.framlayout1,fragment1);
+        fragment2Transaction.add(R.id.framlayout2,fragment2);
+        fragment3Transaction.add(R.id.framlayout3,fragment3);
+        fragment4Transaction.add(R.id.framlayout4,fragment4);
+        fragment5Transaction.add(R.id.framlayout5,fragment5);
+        fragment6Transaction.add(R.id.framlayout6,fragment6);
+
+        fragment1Transaction.commit();
+        fragment2Transaction.commit();
+        fragment3Transaction.commit();
+        fragment4Transaction.commit();
+        fragment5Transaction.commit();
+        fragment6Transaction.commit();
+    }
+
 }

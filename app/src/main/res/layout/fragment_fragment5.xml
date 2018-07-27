@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Fragments.Fragment5"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="we are a dedicatd firm"
+        android:textAllCaps="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="3dp"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Why choose miliu"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+</LinearLayout>

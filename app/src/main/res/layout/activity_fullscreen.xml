@@ -29,240 +29,35 @@
             android:padding="0dp"
             android:src="@drawable/logo2" />
 
-        <TextView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="know about our company"
-            android:textAllCaps="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"
-            />
+            android:id="@+id/framlayout1" />
 
-        <TextView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="We are an Insurance Company"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="30dp"
-            android:textStyle="bold" />
+            android:id="@+id/framlayout2" />
 
-        <TextView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="With a experience of over 10 years, miliu has contributed significantly to the growth and development of the general insurance industry in the United States of America and currently ranks amongst the top 3 private general insurance companies in the country. Known for its innovation and creating industry benchmarks, miliu has several fisrts to its credit.It was the first American Insurance Company to introduce 'Free Look Period' "
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"/>
+            android:id="@+id/framlayout3" />
 
-
-            <TextView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="27 years of experience"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:textAlignment="center"    />
+            android:id="@+id/framlayout4" />
 
-        <TextView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Our solutions and the technical expertise of miliu combine with the in-depth market knowledge and goodwill of 'miliu' "
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"/>
+            android:id="@+id/framlayout5" />
 
-        <TextView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Flexible Benefits"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:textAlignment="center"    />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Offering customised insurance products with transparent benefits supported by the best technology is our business philosophy."
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Friendly Staff"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:textAlignment="center"    />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Meet the friendly ,courteous and helpful staff at miliu for all your insurance needs,who are more than willing to help you"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Request A Quote"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="3dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="30dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:hint="Name"
-            android:textColorHint="@color/cardview_dark_background"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"
-            android:inputType="text"
-            android:background="@drawable/rounded_border_edittext"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:hint="Email"
-            android:textColorHint="@color/cardview_dark_background"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"
-            android:inputType="textEmailAddress"
-            android:background="@drawable/rounded_border_edittext"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:hint="Subject"
-            android:textColorHint="@color/cardview_dark_background"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"
-            android:inputType="text"
-            android:background="@drawable/rounded_border_edittext"
-            />
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="144dp"
-            android:textAlignment="textStart"
-            android:textColorHint="@color/cardview_dark_background"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:background="@drawable/rounded_border_edittext"
-            />
-
-        <Button
-            android:layout_width="180dp"
-            android:layout_height="44dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
-            android:background="?attr/colorError"
-            android:text="send message"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textColor="@android:color/background_light"
-            android:textSize="15dp" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="we are a dedicatd firm"
-            android:textAllCaps="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="39dp"
-            android:layout_marginBottom="3dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Why choose miliu"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"
-            android:textAppearance="@color/cardview_dark_background"
-            android:textAlignment="center"
-            android:textSize="30dp"
-            android:textStyle="bold" />
-
+            android:id="@+id/framlayout6" />
 
     </LinearLayout>
 </ScrollView>
