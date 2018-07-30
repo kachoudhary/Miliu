@@ -16,6 +16,9 @@ import com.wipro.miliu.View.Fragments.Fragment3;
 import com.wipro.miliu.View.Fragments.Fragment4;
 import com.wipro.miliu.View.Fragments.Fragment5;
 import com.wipro.miliu.View.Fragments.Fragment6;
+import com.wipro.miliu.View.Fragments.Fragment7;
+import com.wipro.miliu.View.Fragments.Fragment8;
+import com.wipro.miliu.View.Fragments.Fragment9;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -180,30 +183,24 @@ public class FullscreenActivity extends AppCompatActivity {
         Fragment4 fragment4=new Fragment4();
         Fragment5 fragment5=new Fragment5();
         Fragment6 fragment6=new Fragment6();
-
-
+        Fragment7 fragment7=new Fragment7();
+        Fragment8 fragment8=new Fragment8();
+        Fragment9 fragment9=new Fragment9();
 
         FragmentTransaction fragment1Transaction=getSupportFragmentManager().beginTransaction();
-        FragmentTransaction fragment2Transaction=getSupportFragmentManager().beginTransaction();
-        FragmentTransaction fragment3Transaction=getSupportFragmentManager().beginTransaction();
-        FragmentTransaction fragment4Transaction=getSupportFragmentManager().beginTransaction();
-        FragmentTransaction fragment5Transaction=getSupportFragmentManager().beginTransaction();
-        FragmentTransaction fragment6Transaction=getSupportFragmentManager().beginTransaction();
-
 
         fragment1Transaction.add(R.id.framlayout1,fragment1);
-        fragment2Transaction.add(R.id.framlayout2,fragment2);
-        fragment3Transaction.add(R.id.framlayout3,fragment3);
-        fragment4Transaction.add(R.id.framlayout4,fragment4);
-        fragment5Transaction.add(R.id.framlayout5,fragment5);
-        fragment6Transaction.add(R.id.framlayout6,fragment6);
+        fragment1Transaction.add(R.id.framlayout2,fragment2);
+        fragment1Transaction.add(R.id.framlayout3,fragment3);
+        fragment1Transaction.add(R.id.framlayout4,fragment4);
+        fragment1Transaction.add(R.id.framlayout5,fragment5);
+        fragment1Transaction.add(R.id.framlayout6,fragment6);
+        fragment1Transaction.add(R.id.framlayout7,fragment7);
+        fragment1Transaction.add(R.id.framlayout8,fragment8);
+        fragment1Transaction.add(R.id.framlayout9,fragment9);
 
         fragment1Transaction.commit();
-        fragment2Transaction.commit();
-        fragment3Transaction.commit();
-        fragment4Transaction.commit();
-        fragment5Transaction.commit();
-        fragment6Transaction.commit();
+
     }
 
 }
