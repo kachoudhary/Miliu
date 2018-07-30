@@ -29,7 +29,7 @@
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
         android:layout_marginTop="3dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="27dp"
         android:textAppearance="@color/cardview_dark_background"
         android:textAlignment="center"
         android:textSize="30dp"
@@ -42,15 +42,14 @@
         android:background="@drawable/rounded_border_edittext"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical" >
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imageView56"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/small"
@@ -61,6 +60,288 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Trusted Since 1976"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textSize="15dp"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="844dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_border_edittext2"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="3dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"   >
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:src="@drawable/featured_tab1"
+            android:padding="0dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A History of Trust and Dependability"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textAlignment="textStart"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="At miliu, customer centricity is the cornerstone of our culture. Stretching ourselves and going beyond the ordinary, for the satisfaction and smiles of our customer, is deeply embedded in our DNA. Whether our customers face an untoward incident due to the unpredictability of nature, suffer losses due to accident or face medical challenges, we remain committed to be at their side and serve them in their hard times. We proudly say: "
+            android:textAppearance="@color/cardview_dark_background"
+            android:textSize="15dp"
+            android:textAlignment="textStart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+             android:layout_gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imageView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tik"
+                android:layout_marginRight="7dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We are the number one brand in America"
+                android:textAppearance="@color/cardview_dark_background"
+                android:textSize="15dp"
+                android:textAlignment="textStart" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imageView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tik"
+                android:layout_marginRight="7dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We provide unmatched services"
+                android:textAppearance="@color/cardview_dark_background"
+                android:textSize="15dp"
+                android:textAlignment="textStart" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imageView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tik"
+                android:layout_marginRight="7dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Satisfaction is in our DNA"
+                android:textAppearance="@color/cardview_dark_background"
+                android:textSize="15dp"
+                android:textAlignment="textStart" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imageView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tik"
+                android:layout_marginRight="7dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our customer's peace of mind is our greatest reward"
+                android:textAppearance="@color/cardview_dark_background"
+                android:textSize="15dp"
+                android:textAlignment="textStart" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_border_edittext"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/small1"
+            android:layout_marginRight="7dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2.9M Users Never Wrong"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textSize="15dp"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_border_edittext"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/small2"
+            android:layout_marginRight="7dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Easy Quotes and Apps"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textSize="15dp"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_border_edittext"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/small3"
+            android:layout_marginRight="7dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Value Proposition"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textSize="15dp"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_border_edittext"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/small4"
+            android:layout_marginRight="7dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="24/7 With Real Person"
             android:textAppearance="@color/cardview_dark_background"
             android:textSize="15dp"
             android:textAlignment="textStart"

@@ -3,9 +3,157 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.Fragments.Fragment6"
+    android:layout_gravity="center_vertical"
+    android:layout_marginBottom="3dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:background="#FFEAE6E6"
+    android:gravity="center_vertical"
     android:orientation="vertical"
-    >
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp"
+    tools:context=".View.Fragments.Fragment6">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:text="We are Here to Help"
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="4dp"
+        android:text="Whether you are searching for Personal or Business insurance, miliu agents are more than willing to help you find the best policies that suits your need."
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="left"
+        android:src="@drawable/tik" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:text="Financial Security"
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="4dp"
+        android:text="Insurance is an important element of any sound financial plan. Different kinds of...."
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="7dp"
+        android:layout_gravity="left"
+        android:src="@drawable/tik" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:text="Business Goals"
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="4dp"
+        android:text="As with any significant investment or decision,identifying measurable goals helps your insurance get to desired result, and know (or prove)"
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="15dp" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="7dp"
+        android:layout_gravity="left"
+        android:src="@drawable/tik" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:text="Savings and Investing"
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="4dp"
+        android:text="Our savings and investment plans are specific life insurance plans that offer you various..."
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="15dp" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="7dp"
+        android:layout_gravity="left"
+        android:src="@drawable/tik" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:text="Our motto"
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="4dp"
+        android:text="Miliu has always been known as a forward looking customer centric organization. We take immense pride in the spirit of service and the culture of..."
+        android:textAlignment="textStart"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textSize="15dp" />
 
 </LinearLayout>
