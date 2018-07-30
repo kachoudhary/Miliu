@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".View.Fragments.Fragment3"
     android:orientation="vertical"
+    android:layout_marginBottom="15dp"
     >
 
     <TextView
@@ -13,8 +14,8 @@
         android:text="Request A Quote"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:textAppearance="@color/cardview_dark_background"
         android:textSize="30dp"
         android:textStyle="bold" />
