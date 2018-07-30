@@ -1,14 +1,290 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/product_bg1"
+    android:orientation="vertical"
     tools:context=".View.Fragments.Fragment8">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="100dp"
+        android:text="get up to date"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="15dp" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="Latest Update From News"
+        android:textAlignment="center"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="160dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30sp"
+        android:background="#1BBC9B" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/news1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="Miliu approves estimated $1.7 Billion Payout in cash"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/verysmaill"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="May 21,2016"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14dp"
+            android:layout_marginLeft="5dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/verysmaill1"
+            android:layout_marginLeft="5dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tripples"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="#1BBC9B"
+        android:text="read more"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@android:color/background_light"
+        android:textSize="15dp" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/news2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="SaifWay Enhanced Customer Self Service Experience"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/verysmaill"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="May 21,2016"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14dp"
+            android:layout_marginLeft="5dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/verysmaill1"
+            android:layout_marginLeft="5dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tripples"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="#1BBC9B"
+        android:text="read more"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@android:color/background_light"
+        android:textSize="15dp" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/news3" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="Technogical changes reshaping reinsurance industry"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/verysmaill"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="May 21,2016"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14dp"
+            android:layout_marginLeft="5dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/verysmaill1"
+            android:layout_marginLeft="5dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tripples"
+            android:textAppearance="@color/cardview_dark_background"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="#1BBC9B"
+        android:text="read more"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@android:color/background_light"
+        android:textSize="15dp" />
+
+</LinearLayout>

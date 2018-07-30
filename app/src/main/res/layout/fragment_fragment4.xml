@@ -5,12 +5,43 @@
     android:layout_height="match_parent"
     tools:context=".View.Fragments.Fragment4"
     android:orientation="vertical"
+    android:background="@drawable/product_bg1"
+    android:layout_marginTop="25dp"
     >
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment4" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="100dp"
+        android:text="We've got you covered"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="Insurance Product"
+        android:textAlignment="center"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="160dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30sp"
+        android:background="#1BBC9B" />
 
 </LinearLayout>

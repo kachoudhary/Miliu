@@ -1,14 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:background="#1BBC9B"
+    android:orientation="vertical"
     tools:context=".View.Fragments.Fragment7">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/content_bg1" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="100dp"
+        android:text="sucessful milestone area"
+        android:textAllCaps="true"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="The Importance of Being Covered"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="4dp"
+        android:text="We have beeen providing stability and reliability to our clients since 1859 to help them live their lives with confidence, to give them peace of mind, and enable them to realize their dreams for their loved ones and their legacy. Miliu helps you and your family prepare for the unexpected challenges of tomorrow. By planning smartly, you can ensure that you'll always be position of strength with flexibility in options. We offer you a smart affordable and convenient way to safeguard the future for you and your family."
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="15dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="#282a57"
+        android:text="talk to us"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@android:color/background_light"
+        android:textSize="15dp" />
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/smalicon5"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="3dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="7968"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Insurance Policies"
+        android:textStyle="bold"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="15dp"
+        android:textAlignment="center" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/smalicon7"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="3dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="2979"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Happy Customers"
+        android:textStyle="bold"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="15dp"
+        android:textAlignment="center" />
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/smalicon6"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="3dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="127"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Countries World Wide"
+        android:textStyle="bold"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="15dp"
+        android:textAlignment="center" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/smalicon8"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="3dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:text="1798"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="105dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Insurance Agencies"
+        android:textStyle="bold"
+        android:textAppearance="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="15dp"
+        android:textAlignment="center" />
+
+
+</LinearLayout>
