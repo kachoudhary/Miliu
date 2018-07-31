@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/product_bg1"
-    android:orientation="vertical"
     tools:context=".View.Fragments.Fragment8">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/product_bg1"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+
 
     <TextView
         android:layout_width="match_parent"
@@ -286,5 +297,5 @@
         android:textAppearance="@color/cardview_dark_background"
         android:textColor="@android:color/background_light"
         android:textSize="15dp" />
-
-</LinearLayout>
+ </LinearLayout>
+</FrameLayout>

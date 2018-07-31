@@ -9,146 +9,134 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-<android.support.v7.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-<RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-   <ScrollView
-       android:layout_alignParentTop="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fadeScrollbars="true" >
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:orientation="vertical" >
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/framlayout1" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/framlayout2" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/framlayout3" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/framlayout4" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/framlayout5" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/framlayout6" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/framlayout7" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/framlayout8" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/framlayout9" />
-   </LinearLayout>
-</ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"  >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="#282a57"
-            android:layout_gravity="center"
-            android:gravity="center" >
-            <TextView
-                android:layout_marginRight="9dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Home"
-                android:textColor="@color/cardview_light_background"
-                android:textSize="15sp" />
-            <View
-                android:layout_marginRight="9dp"
-                android:layout_width="1dp"
-                android:layout_height="17sp"
-                android:layout_gravity="center"
-                android:background="@android:color/darker_gray" />
-            <TextView
-                android:layout_marginRight="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Raise a Claim"
-                android:textColor="@color/cardview_light_background"
-                android:textSize="15sp" />
-            <View
-                android:layout_marginRight="9dp"
-                android:layout_width="1dp"
-                android:layout_height="17sp"
-                android:layout_gravity="center"
-                android:background="@android:color/darker_gray" />
-            <TextView
-                android:layout_marginRight="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="My Account"
-                android:textColor="@color/cardview_light_background"
-                android:textSize="15sp"  />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Powered by Wipro Digital Experience Platform (DXP)"
-            android:background="@color/cardview_light_background"
-            android:textColor="@color/cardview_dark_background"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textAlignment="center"  />
-
-    </LinearLayout>
-
-
-</RelativeLayout>
-</android.support.v7.widget.CardView>
-
-    <TextView
+    <android.support.v7.widget.CardView
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadeScrollbars="true" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/framlayout1" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/framlayout2" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/framlayout3" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/framlayout4" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/framlayout5" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/framlayout6" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/framlayout7" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/framlayout8" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/framlayout9" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"  >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:background="#282a57"
+                    android:layout_gravity="center"
+                    android:gravity="center" >
+                    <TextView
+                        android:layout_marginRight="9dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="15sp" />
+                    <View
+                        android:layout_marginRight="9dp"
+                        android:layout_width="1dp"
+                        android:layout_height="17sp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Raise a Claim"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="15sp" />
+                    <View
+                        android:layout_marginRight="9dp"
+                        android:layout_width="1dp"
+                        android:layout_height="17sp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Account"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="15sp"  />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Powered by Wipro Digital Experience Platform (DXP)"
+                    android:background="@color/cardview_light_background"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"  />
+
+            </LinearLayout>
+        </RelativeLayout>
+   </android.support.v7.widget.CardView>
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
