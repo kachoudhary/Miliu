@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
+    android:padding="0dp"
     tools:context=".View.Fragments.Fragment6">
 
     <LinearLayout
@@ -15,10 +16,8 @@
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
         android:layout_marginTop="12dp"
-        android:gravity="center_vertical"
-        android:paddingEnd="15dp"
-        android:paddingStart="15dp"
-        >
+        android:gravity="center_vertical">
+
 
     <TextView
         android:layout_width="match_parent"

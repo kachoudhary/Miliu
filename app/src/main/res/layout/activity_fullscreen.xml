@@ -136,14 +136,20 @@
 
             </LinearLayout>
         </RelativeLayout>
-   </android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible"
+        android:fitsSystemWindows="true"
+        android:id="@+id/fragment_avamo_chat"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp" />
 
         <LinearLayout
             android:id="@+id/fullscreen_content_controls"
@@ -165,5 +171,3 @@
 
         </LinearLayout>
     </FrameLayout>
-
-</FrameLayout>
