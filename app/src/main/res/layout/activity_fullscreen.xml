@@ -18,10 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ScrollView
+                android:id="@+id/mainscrollbar"
                 android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fadeScrollbars="true" >
+                android:scrollbars="none">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -74,7 +75,21 @@
                 </LinearLayout>
             </ScrollView>
 
+            <FrameLayout
+                android:layout_alignParentRight="true"
+                android:layout_above="@id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/fragment_avamo_chat"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp" />
+
             <LinearLayout
+                android:layout_alignParentEnd="true"
+                android:id="@+id/footer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -141,11 +156,11 @@
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
     <FrameLayout
-        android:layout_width="fill_parent"
+         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:visibility="visible"
         android:fitsSystemWindows="true"
-        android:id="@+id/fragment_avamo_chat"
+        android:id="@+id/dummy"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="15dp"

@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.wipro.miliu.R;
+import com.wipro.miliu.View.Fragments.AvamoChatFragment;
 import com.wipro.miliu.View.Fragments.Fragment1;
 import com.wipro.miliu.View.Fragments.Fragment2;
 import com.wipro.miliu.View.Fragments.Fragment3;
@@ -19,6 +20,8 @@ import com.wipro.miliu.View.Fragments.Fragment6;
 import com.wipro.miliu.View.Fragments.Fragment7;
 import com.wipro.miliu.View.Fragments.Fragment8;
 import com.wipro.miliu.View.Fragments.Fragment9;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -97,12 +100,16 @@ public class FullscreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/glyphicons_halflings_regular.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
+
         setContentView(R.layout.activity_fullscreen);
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
-
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
@@ -186,6 +193,7 @@ public class FullscreenActivity extends AppCompatActivity {
         Fragment7 fragment7=new Fragment7();
         Fragment8 fragment8=new Fragment8();
         Fragment9 fragment9=new Fragment9();
+        AvamoChatFragment fragment10=new AvamoChatFragment();
 
         FragmentTransaction fragment1Transaction=getSupportFragmentManager().beginTransaction();
 
@@ -198,6 +206,7 @@ public class FullscreenActivity extends AppCompatActivity {
         fragment1Transaction.add(R.id.framlayout7,fragment7);
         fragment1Transaction.add(R.id.framlayout8,fragment8);
         fragment1Transaction.add(R.id.framlayout9,fragment9);
+        fragment1Transaction.add(R.id.fragment_avamo_chat,fragment10);
 
         fragment1Transaction.commit();
 
