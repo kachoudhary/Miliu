@@ -4,35 +4,21 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.wipro.miliu.R;
-import com.wipro.miliu.View.Fragments.AvamoChatFragment;
-import com.wipro.miliu.View.Fragments.Fragment1;
-import com.wipro.miliu.View.Fragments.Fragment2;
-import com.wipro.miliu.View.Fragments.Fragment3;
-import com.wipro.miliu.View.Fragments.Fragment4;
-import com.wipro.miliu.View.Fragments.Fragment5;
-import com.wipro.miliu.View.Fragments.Fragment6;
-import com.wipro.miliu.View.Fragments.Fragment7;
-import com.wipro.miliu.View.Fragments.Fragment8;
-import com.wipro.miliu.View.Fragments.Fragment9;
-
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class FullscreenActivity extends AppCompatActivity {
+public class Myaccountactivity extends AppCompatActivity {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -74,8 +60,6 @@ public class FullscreenActivity extends AppCompatActivity {
         @Override
         public void run() {
             // Delayed display of UI elements
-            ActionBar actionBar = getSupportActionBar();
-            actionBar.hide();
             mControlsView.setVisibility(View.VISIBLE);
         }
     };
@@ -103,22 +87,17 @@ public class FullscreenActivity extends AppCompatActivity {
 
     TextView homebutton;
     TextView claimbutton;
-    TextView accountbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/glyphicons_halflings_regular.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build());
-
-        setContentView(R.layout.activity_fullscreen);
+        setContentView(R.layout.activity_myaccountactivity);
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
+
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
@@ -134,13 +113,9 @@ public class FullscreenActivity extends AppCompatActivity {
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
         homebutton =(TextView)findViewById(R.id.homebutton);
         claimbutton=(TextView)findViewById(R.id.claimbutton);
-        accountbutton=(TextView)findViewById(R.id.accountbutton);
 
-        fragmentloading();
         footerloading();
-
     }
-
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -195,64 +170,25 @@ public class FullscreenActivity extends AppCompatActivity {
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
-    private void fragmentloading() {
-
-        Fragment1 fragment1=new Fragment1();
-        Fragment2 fragment2=new Fragment2();
-        Fragment3 fragment3=new Fragment3();
-        Fragment4 fragment4=new Fragment4();
-        Fragment5 fragment5=new Fragment5();
-        Fragment6 fragment6=new Fragment6();
-        Fragment7 fragment7=new Fragment7();
-        Fragment8 fragment8=new Fragment8();
-        Fragment9 fragment9=new Fragment9();
-        AvamoChatFragment fragment10=new AvamoChatFragment();
-
-        FragmentTransaction fragment1Transaction=getSupportFragmentManager().beginTransaction();
-
-        fragment1Transaction.add(R.id.framlayout1,fragment1);
-        fragment1Transaction.add(R.id.framlayout2,fragment2);
-        fragment1Transaction.add(R.id.framlayout3,fragment3);
-        fragment1Transaction.add(R.id.framlayout4,fragment4);
-        fragment1Transaction.add(R.id.framlayout5,fragment5);
-        fragment1Transaction.add(R.id.framlayout6,fragment6);
-        fragment1Transaction.add(R.id.framlayout7,fragment7);
-        fragment1Transaction.add(R.id.framlayout8,fragment8);
-        fragment1Transaction.add(R.id.framlayout9,fragment9);
-        //fragment1Transaction.add(R.id.fragment_avamo_chat,fragment10);
-
-        fragment1Transaction.commit();
-
-
-        final WebView avamochat=(WebView)findViewById(R.id.avamochat);
-
-        avamochat.getSettings().setJavaScriptEnabled(true);
-        avamochat.evaluateJavascript("javascript: " +
-                        "var AvaamoChatBot=function(t){function o(t,o){var n=document.createElement(\"script\");n.setAttribute(\"src\",t),n.onload=o,document.body.appendChild(n)}return this.options=t||{},this.load=function(t){o(this.options.url,function(){window.Avaamo.addFrame(),t&&\"function\"==typeof(t)&&t(window.Avaamo)})},this};\n" +
-                        "var chatBox = new AvaamoChatBot({url: 'https://c0.avaamo.com/web_channels/d9d2ac61-22ed-494a-bcf7-33337e2a2771.js?audio_visible=true&audio_on=true&history=false&banner_text=HI&banner_title=Hi%2C+I%27m+Connie%2C+your+personal+change+assistant%2E+What+can+I+do+for+you+today%3F&user_info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGaXJzdE5hbWUiOiJDbGFpcmUiLCJMYXN0TmFtZSI6Ikdvb2R3aWxsIiwiZ2VuZGVyIjoiZmVtYWxlIiwiTWFyaXRhbFN0YXR1cyI6IlNpbmdsZSIsIk9jY3VwYXRpb24iOiJDb25zdWx0YW50IiwiRWR1Y2F0aW9uIjoiTUJBIiwiU29jaWFsU2VnbWVudCI6Ik1pbGxlbmlhbCIsIlNvY2lhbElEIjoiQENsYWlyZWhhc0dvb2R3aWxsIiwiSW5zdXJhbmNlTmVlZHMiOiJQZXJzb25hbCBhdXRvIGluc3VyYW5jZSIsIkxpZmVFdmVudCI6IlByb21vdGlvbiIsIlRyaWdnZXJGb3JJbnN1cmFuY2VOZWVkcyI6ImJ1eWluZyBhIGNhciIsIlRyaWdnZXJEZXRhaWxzIjoiSG9uZGEgQ1JWIn0.46AMiA_JTo8fYC27JgS6ZnfPDZEj4hGb3JjhohNP1PY'});\n" +
-                        "chatBox.load();\n",
-                null);
-    }
-
     private void footerloading() {
+
+        homebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                homebutton.setTextColor(Color.parseColor("#008000"));
+                homebutton.setPaintFlags(homebutton.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+                Intent claimbuttonactivity=new Intent(Myaccountactivity.this, FullscreenActivity.class);
+                claimbuttonactivity.putExtra("kartikey","isgreat");
+                startActivity(claimbuttonactivity);
+            }
+        });
 
         claimbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 claimbutton.setTextColor(Color.parseColor("#008000"));
                 claimbutton.setPaintFlags(claimbutton.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-                Intent claimbuttonactivity=new Intent(FullscreenActivity.this, RaiseClaimActivity.class);
-                claimbuttonactivity.putExtra("kartikey","isgreat");
-                startActivity(claimbuttonactivity);
-            }
-        });
-
-        accountbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                accountbutton.setTextColor(Color.parseColor("#008000"));
-                accountbutton.setPaintFlags(claimbutton.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-                Intent accountactivity=new Intent(FullscreenActivity.this,Myaccountactivity.class);
+                Intent accountactivity=new Intent(Myaccountactivity.this,RaiseClaimActivity.class);
                 accountactivity.putExtra("kartikey","isgreat");
                 startActivity(accountactivity);
             }

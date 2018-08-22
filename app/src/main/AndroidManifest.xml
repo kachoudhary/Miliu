@@ -23,6 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".View.Activities.RaiseClaimActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_raise_claim"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".View.Activities.Myaccountactivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_myaccountactivity"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>
