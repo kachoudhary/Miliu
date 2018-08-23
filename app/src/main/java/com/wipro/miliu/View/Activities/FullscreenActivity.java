@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
@@ -235,6 +236,9 @@ public class FullscreenActivity extends AppCompatActivity {
     }
 
     private void footerloading() {
+
+        Intent mainintent=getIntent();
+        String intentrecievedvalue=mainintent.getStringExtra("kartikey");
 
         claimbutton.setOnClickListener(new View.OnClickListener() {
             @Override
