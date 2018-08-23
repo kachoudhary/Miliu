@@ -20,6 +20,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -107,7 +108,7 @@ public class RaiseClaimActivity extends AppCompatActivity {
 
     TextView homebutton;
     TextView accountbutton;
-
+    Button clearbtn;
 
     ImageView vinnumberimage;
     ImageView numberplateimage;
@@ -422,5 +423,18 @@ public class RaiseClaimActivity extends AppCompatActivity {
                 Toast.makeText(RaiseClaimActivity.this, "Either pick Image or Click it",Toast.LENGTH_LONG).show();
             }
         }
+    }
+
+    public void clearbtnactn(View view) {
+        vinnumberimage.setImageResource(R.drawable.number_plate);
+        numberplateimage.setImageResource(R.drawable.front_right);
+        frontrightimage.setImageResource(R.drawable.front_left);
+        frontleftimage.setImageResource(R.drawable.back_right);
+        backrightimage.setImageResource(R.drawable.number_plate);
+        backleftimage.setImageResource(R.drawable.back_left);
+        sideleftimage.setImageResource(R.drawable.number_plate);
+        siderightimage.setImageResource(R.drawable.back_right);
+        damageoneimage.setImageResource(R.drawable.damage1);
+        Toast.makeText(RaiseClaimActivity.this, "Cleared",Toast.LENGTH_SHORT).show();
     }
 }
