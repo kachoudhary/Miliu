@@ -192,9 +192,9 @@ public class Myaccountactivity extends AppCompatActivity {
             public void onClick(View view) {
                 claimbutton.setTextColor(Color.parseColor("#008000"));
                 claimbutton.setPaintFlags(claimbutton.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-                Intent accountactivity=new Intent(Myaccountactivity.this,RaiseClaimActivity.class);
-                accountactivity.putExtra("kartikey","isgreat");
-                startActivity(accountactivity);
+                Intent claimactivity=new Intent(Myaccountactivity.this,RaiseClaimActivity.class);
+                claimactivity.putExtra("kartikey","isgreat");
+                startActivity(claimactivity);
             }
         });
     }

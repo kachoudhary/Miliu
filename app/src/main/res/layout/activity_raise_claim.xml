@@ -252,7 +252,7 @@
                             android:textSize="13sp" />
 
                         <ImageView
-                            android:id="@+id/rightsideimage"
+                            android:id="@+id/backrightimage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -356,7 +356,6 @@
                             android:textAlignment="center"
                             android:textColor="@color/cardview_dark_background"
                             android:textStyle="bold"
-                            android:textAllCaps="true"
                             android:textSize="20sp" />
                         <TextView
                             android:layout_width="match_parent"

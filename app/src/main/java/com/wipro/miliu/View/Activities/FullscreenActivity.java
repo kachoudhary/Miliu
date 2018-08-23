@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.wipro.miliu.R;
@@ -105,6 +106,7 @@ public class FullscreenActivity extends AppCompatActivity {
     TextView homebutton;
     TextView claimbutton;
     TextView accountbutton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

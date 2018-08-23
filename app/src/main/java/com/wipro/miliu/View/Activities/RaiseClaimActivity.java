@@ -1,9 +1,18 @@
 package com.wipro.miliu.View.Activities;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.net.Uri;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,9 +20,18 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.wipro.miliu.R;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -90,6 +108,18 @@ public class RaiseClaimActivity extends AppCompatActivity {
     TextView homebutton;
     TextView accountbutton;
 
+
+    ImageView vinnumberimage;
+    ImageView numberplateimage;
+    ImageView frontrightimage;
+    ImageView frontleftimage;
+    ImageView backrightimage;
+    ImageView backleftimage;
+    ImageView sideleftimage;
+    ImageView siderightimage;
+    ImageView damageoneimage;
+    ImageView currentImage=null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,8 +146,21 @@ public class RaiseClaimActivity extends AppCompatActivity {
         homebutton =(TextView)findViewById(R.id.homebutton);
         accountbutton=(TextView)findViewById(R.id.accountbutton);
 
+        vinnumberimage=(ImageView)findViewById(R.id.vinnumberimage);
+        numberplateimage=(ImageView)findViewById(R.id.numberplateimage);
+        frontrightimage=(ImageView)findViewById(R.id.frontrightimage);
+        frontleftimage=(ImageView)findViewById(R.id.frontleftimage);
+        backrightimage=(ImageView)findViewById(R.id.backrightimage);
+        backleftimage=(ImageView)findViewById(R.id.backleftimage);
+        sideleftimage=(ImageView)findViewById(R.id.sideleftimage);
+        siderightimage=(ImageView)findViewById(R.id.siderightimage);
+        damageoneimage=(ImageView)findViewById(R.id.damageoneimage);
+
+
         footerloading();
+        imageclicklistener();
     }
+
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -198,5 +241,186 @@ public class RaiseClaimActivity extends AppCompatActivity {
                 startActivity(accountactivity);
             }
         });
+    }
+
+
+    private void imageclicklistener() {
+
+        vinnumberimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("karchou","vinnumberimage pressed");
+                selectImage(vinnumberimage);
+            }
+        });
+
+        numberplateimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("karchou","numberplateimage pressed");
+                selectImage(numberplateimage);
+            }
+        });
+
+        frontrightimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("karchou","frontrightimage pressed");
+                selectImage(frontrightimage);
+            }
+        });
+
+        frontleftimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("karchou","frontleftimage pressed");
+                selectImage(frontleftimage);
+            }
+        });
+
+        backrightimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("karchou","backrightimage pressed");
+                selectImage(backrightimage);
+            }
+        });
+
+
+        backleftimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("karchou","backleftimage pressed");
+                selectImage(backleftimage);
+            }
+        });
+
+
+        sideleftimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("karchou","sideleftimage pressed");
+                selectImage(sideleftimage);
+            }
+        });
+
+        siderightimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("karchou","siderightimage pressed");
+                selectImage(siderightimage);
+            }
+        });
+
+        damageoneimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("karchou","damageoneimage pressed");
+                selectImage(damageoneimage);
+            }
+        });
+    }
+
+    private void  selectImage(ImageView selectedImageView) {
+        final CharSequence[] options={"Take Photo","Choose from Gallery","Cancel"};
+        currentImage=selectedImageView;
+        final AlertDialog.Builder imageuploadbuilder=new AlertDialog.Builder(RaiseClaimActivity.this);
+        imageuploadbuilder.setTitle("Select Photo");
+        imageuploadbuilder.setItems(options, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int item) {
+
+              if (options[item].equals("Take Photo")) {
+                  Intent photoclicker=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                  File f=new File(android.os.Environment.getExternalStorageDirectory(),"temp.jpg");
+                  photoclicker.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
+                  startActivityForResult(photoclicker,1);
+              }
+
+              else if (options[item].equals("Choose from Gallery")) {
+                  Intent galerychooser=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                  galerychooser.setType("image/*");
+                  startActivityForResult(galerychooser,2);
+              }
+              else if (options[item].equals("Cancel")) {
+                  dialogInterface.dismiss();
+              }
+            }
+        });
+        imageuploadbuilder.show();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode==RESULT_OK) {
+            if (requestCode==1) {
+                File f=new File(Environment.getExternalStorageDirectory().toString());
+                for (File temp : f.listFiles()) {
+                    if (temp.getName().equals("temp.jpg")) {
+                        f=temp;
+                        break;
+                    }
+                }
+                try {
+                    Bitmap bitmap;
+                    BitmapFactory.Options bitmpaOptions=new BitmapFactory.Options();
+
+                    bitmap=BitmapFactory.decodeFile(f.getAbsolutePath(),bitmpaOptions);
+                    currentImage.setImageBitmap(bitmap);
+
+                    String path=android.os.Environment.getExternalStorageDirectory()
+                                +File.separator
+                                +"Phoenix" +File.separator+"default";
+                    f.delete();
+
+
+                    OutputStream outFile=null;
+                    File file=new File(path,String.valueOf(System.currentTimeMillis())+".jpg");
+                    try {
+                        outFile=new FileOutputStream(file);
+                        bitmap.compress(Bitmap.CompressFormat.JPEG,85,outFile);
+                        outFile.flush();
+                        outFile.close();
+                    }
+                    catch (FileNotFoundException ex){
+                        ex.printStackTrace();
+                    }
+                    catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                    catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+            else if (requestCode==2) {
+                   try {
+                    final Uri selectimage=data.getData();
+                    final InputStream imageStream=getContentResolver().openInputStream(selectimage);
+                    final Bitmap selectedImaage=BitmapFactory.decodeStream(imageStream);
+                    currentImage.setImageBitmap(selectedImaage);
+                } catch (FileNotFoundException ex) {
+                    ex.printStackTrace();
+                    Toast.makeText(RaiseClaimActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
+                }
+
+           /*   String filepath[] ={MediaStore.Images.Media.DATA};
+                Cursor c=getContentResolver().query(selectimage,filepath,null,null,null);
+                c.moveToFirst();
+                int ColumnIndex=c.getColumnIndex(filepath[0]);
+                String picturepath=c.getString(ColumnIndex);
+                c.close();
+                Bitmap thumbnail=(BitmapFactory.decodeFile(picturepath));
+                Log.i("karchou imagepath", picturepath);
+                vinnumberimage.setImageBitmap(thumbnail); */
+            }
+            else {
+                Toast.makeText(RaiseClaimActivity.this, "Either pick Image or Click it",Toast.LENGTH_LONG).show();
+            }
+        }
     }
 }
