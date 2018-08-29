@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.wipro.miliu.R;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -436,5 +437,9 @@ public class RaiseClaimActivity extends AppCompatActivity {
         siderightimage.setImageResource(R.drawable.back_right);
         damageoneimage.setImageResource(R.drawable.damage1);
         Toast.makeText(RaiseClaimActivity.this, "Cleared",Toast.LENGTH_SHORT).show();
+    }
+
+    public void uploadbtnclick(View view) {
+
     }
 }
