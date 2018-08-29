@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -17,6 +16,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Base64;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,6 +25,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.Volley;
 import com.wipro.miliu.R;
 
 import java.io.ByteArrayOutputStream;
@@ -34,6 +41,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONObject;
+
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -121,6 +136,8 @@ public class RaiseClaimActivity extends AppCompatActivity {
     ImageView siderightimage;
     ImageView damageoneimage;
     ImageView currentImage=null;
+
+    static Map<String, String> postParam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -441,5 +458,116 @@ public class RaiseClaimActivity extends AppCompatActivity {
 
     public void uploadbtnclick(View view) {
 
+        vinnumberimage.buildDrawingCache();
+        numberplateimage.buildDrawingCache();
+        frontrightimage.buildDrawingCache();
+        frontleftimage.buildDrawingCache();
+        backrightimage.buildDrawingCache();
+        backleftimage.buildDrawingCache();
+        sideleftimage.buildDrawingCache();
+        siderightimage.buildDrawingCache();
+        damageoneimage.buildDrawingCache();
+
+
+
+        Bitmap bitmapvinnumberimage=vinnumberimage.getDrawingCache();
+        Bitmap bitmapnumberplateimage=numberplateimage.getDrawingCache();
+        Bitmap bitmapfrontrightimage=frontrightimage.getDrawingCache();
+        Bitmap bitmapfrontleftimage=frontleftimage.getDrawingCache();
+        Bitmap bitmapbackrightimage=backrightimage.getDrawingCache();
+        Bitmap bitmapbackleftimage=backleftimage.getDrawingCache();
+        Bitmap bitmapsideleftimage=sideleftimage.getDrawingCache();
+        Bitmap bitmapsiderightimage=siderightimage.getDrawingCache();
+        Bitmap bitmapdamageoneimage=damageoneimage.getDrawingCache();
+
+
+
+        ByteArrayOutputStream vinnumberimagestream=new ByteArrayOutputStream();
+        ByteArrayOutputStream numberplateimagestream=new ByteArrayOutputStream();
+        ByteArrayOutputStream frontrightimagestream=new ByteArrayOutputStream();
+        ByteArrayOutputStream frontleftimagestream=new ByteArrayOutputStream();
+        ByteArrayOutputStream backrightimagestream=new ByteArrayOutputStream();
+        ByteArrayOutputStream backleftimagestream=new ByteArrayOutputStream();
+        ByteArrayOutputStream sideleftimagestream=new ByteArrayOutputStream();
+        ByteArrayOutputStream siderightimagestream=new ByteArrayOutputStream();
+        ByteArrayOutputStream damageoneimagestream=new ByteArrayOutputStream();
+
+
+        bitmapvinnumberimage.compress(Bitmap.CompressFormat.JPEG,90,vinnumberimagestream);
+        bitmapnumberplateimage.compress(Bitmap.CompressFormat.JPEG,90,numberplateimagestream);
+        bitmapfrontrightimage.compress(Bitmap.CompressFormat.JPEG,90,frontrightimagestream);
+        bitmapfrontleftimage.compress(Bitmap.CompressFormat.JPEG,90,frontleftimagestream);
+        bitmapbackrightimage.compress(Bitmap.CompressFormat.JPEG,90,backrightimagestream);
+        bitmapbackleftimage.compress(Bitmap.CompressFormat.JPEG,90,backleftimagestream);
+        bitmapsideleftimage.compress(Bitmap.CompressFormat.JPEG,90,sideleftimagestream);
+        bitmapsiderightimage.compress(Bitmap.CompressFormat.JPEG,90,siderightimagestream);
+        bitmapdamageoneimage.compress(Bitmap.CompressFormat.JPEG,90,damageoneimagestream);
+
+
+        byte[] vinnumberimagebyte=vinnumberimagestream.toByteArray();
+        byte[] numberplateimagebyte=numberplateimagestream.toByteArray();
+        byte[] frontrightimagebyte=frontrightimagestream.toByteArray();
+        byte[] frontleftimagebyte=frontleftimagestream.toByteArray();
+        byte[] backrightimagebyte=backrightimagestream.toByteArray();
+        byte[] backleftimagebyte=backleftimagestream.toByteArray();
+        byte[] sideleftimagebyte=sideleftimagestream.toByteArray();
+        byte[] siderightimagebyte=siderightimagestream.toByteArray();
+        byte[] damageoneimagebyte=damageoneimagestream.toByteArray();
+
+        final String img_vinnumber= Base64.encodeToString(vinnumberimagebyte,0);
+        final String img_numberplate= Base64.encodeToString(numberplateimagebyte,0);
+        final String img_frontright= Base64.encodeToString(frontrightimagebyte,0);
+        final String img_frontleft= Base64.encodeToString(frontleftimagebyte,0);
+        final String img_backright= Base64.encodeToString(backrightimagebyte,0);
+        final String img_backleft= Base64.encodeToString(backleftimagebyte,0);
+        final String img_sideleft= Base64.encodeToString(sideleftimagebyte,0);
+        final String img_sideright= Base64.encodeToString(siderightimagebyte,0);
+        final String img_damageone= Base64.encodeToString(damageoneimagebyte,0);
+
+        Log.i("karchoustring",img_vinnumber +"/n"+ img_numberplate +"/n"+ img_frontright +"/n"+ img_frontleft+
+                "/n"+ img_backright +"/n"+ img_backleft +"/n"+ img_sideleft +"/n"+ img_sideright+"/n"+ img_damageone);
+
+        Log.i("decode",img_vinnumber);
+
+        postParam= new HashMap<String, String>();
+        postParam.put("vinnumberimage", img_vinnumber);
+        postParam.put("numberplateimage", img_numberplate);
+        postParam.put("frontrightimage", img_frontright);
+        postParam.put("frontleftimage", img_frontleft);
+        postParam.put("backrightimage", img_backright);
+        postParam.put("backleftimage", img_backleft);
+        postParam.put("sideleftimage", img_sideleft);
+        postParam.put("siderightimage", img_sideright);
+        postParam.put("damageoneimage", img_damageone);
+    }
+
+
+    private void makeJSONObjreq() {
+
+        RequestQueue queue= Volley.newRequestQueue(this);
+
+
+        //showprogressdialog
+        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST, null, new JSONObject(postParam), new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Log.d("Response",response.toString());
+                //hideprogressdialog
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("Err", "Error: " + error.getMessage());
+                //hideProgressDialog
+            }
+        }) {
+
+            public Map<String,String> getHeaders() throws AuthFailureError {
+                HashMap<String,String> headers=new HashMap<String, String>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+        queue.add(jsonObjectRequest);
     }
 }
