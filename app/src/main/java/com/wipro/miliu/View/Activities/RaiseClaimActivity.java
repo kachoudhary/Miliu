@@ -117,6 +117,7 @@ public class RaiseClaimActivity extends AppCompatActivity {
         fragment_uploadimages fragmentimages=new fragment_uploadimages();
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.fragment_images,fragmentimages);
+        fragmentTransaction.addToBackStack(fragmentimages.toString());
         fragmentTransaction.commit();
 
         footerloading();

@@ -12,6 +12,8 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,7 +21,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -32,7 +33,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.wipro.miliu.R;
 import com.wipro.miliu.View.Activities.RaiseClaimActivity;
-
+import com.wipro.miliu.View.Fragments.Fragment_imageprocessing;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
@@ -104,7 +105,7 @@ public class fragment_uploadimages extends Fragment {
         clearbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vinnumberimage.setImageResource(R.drawable.vin);
+/*              vinnumberimage.setImageResource(R.drawable.vin);
                 numberplateimage.setImageResource(R.drawable.number_plate);
                 frontrightimage.setImageResource(R.drawable.front_right);
                 frontleftimage.setImageResource(R.drawable.front_left);
@@ -113,7 +114,14 @@ public class fragment_uploadimages extends Fragment {
                 sideleftimage.setImageResource(R.drawable.side_left);
                 siderightimage.setImageResource(R.drawable.back_right);
                 damageoneimage.setImageResource(R.drawable.damage1);
-                Toast.makeText(getActivity(), "Cleared",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Cleared",Toast.LENGTH_SHORT).show();*/
+
+                Fragment_imageprocessing fragment_imageprocessing=new Fragment_imageprocessing();
+                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_images,fragment_imageprocessing);
+                fragmentTransaction.addToBackStack(fragment_imageprocessing.toString());
+                fragmentTransaction.commit();
             }
         });
 
