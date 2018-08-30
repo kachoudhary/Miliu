@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 
 import com.wipro.miliu.R;
 
@@ -20,6 +22,7 @@ public class Fragment_imageprocessing extends Fragment {
         // Required empty public constructor
     }
 
+     WebView gifview;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -44,6 +47,11 @@ public class Fragment_imageprocessing extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View inflaterview=inflater.inflate(R.layout.fragment_imageprocessing, container, false);
+        gifview=(WebView)inflaterview.findViewById(R.id.gifview);
+        gifview.loadUrl("file:///android_asset/gif/loader.gif");
+        gifview.setInitialScale(1);
+        gifview.getSettings().setLoadWithOverviewMode(true);
+        gifview.getSettings().setUseWideViewPort(true);
         return inflaterview;
     }
 

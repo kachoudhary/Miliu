@@ -105,7 +105,7 @@ public class fragment_uploadimages extends Fragment {
         clearbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-/*              vinnumberimage.setImageResource(R.drawable.vin);
+                vinnumberimage.setImageResource(R.drawable.vin);
                 numberplateimage.setImageResource(R.drawable.number_plate);
                 frontrightimage.setImageResource(R.drawable.front_right);
                 frontleftimage.setImageResource(R.drawable.front_left);
@@ -114,14 +114,7 @@ public class fragment_uploadimages extends Fragment {
                 sideleftimage.setImageResource(R.drawable.side_left);
                 siderightimage.setImageResource(R.drawable.back_right);
                 damageoneimage.setImageResource(R.drawable.damage1);
-                Toast.makeText(getActivity(), "Cleared",Toast.LENGTH_SHORT).show();*/
-
-                Fragment_imageprocessing fragment_imageprocessing=new Fragment_imageprocessing();
-                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_images,fragment_imageprocessing);
-                fragmentTransaction.addToBackStack(fragment_imageprocessing.toString());
-                fragmentTransaction.commit();
+                Toast.makeText(getActivity(), "Cleared images",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -213,6 +206,15 @@ public class fragment_uploadimages extends Fragment {
         return createinflater;
     }
 
+    private void loaderenabled(){
+        Fragment_imageprocessing fragment_imageprocessing=new Fragment_imageprocessing();
+        FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_images,fragment_imageprocessing);
+        fragmentTransaction.addToBackStack(fragment_imageprocessing.toString());
+        fragmentTransaction.commit();
+    }
+
     private void imageclicklistener() {
 
         vinnumberimage.setOnClickListener(new View.OnClickListener() {
@@ -289,7 +291,6 @@ public class fragment_uploadimages extends Fragment {
             }
         });
     }
-
 
     private void  selectImage(ImageView selectedImageView) {
         final CharSequence[] options={"Take Photo","Choose from Gallery","Cancel"};
@@ -398,18 +399,18 @@ public class fragment_uploadimages extends Fragment {
 
         RequestQueue queue= Volley.newRequestQueue(getContext());
 
-        //showprogressdialog
+
         JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST, posturl, new JSONObject(postParam), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 Log.d("Response",response.toString());
-                //hideprogressdialog
+                loaderenabled();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d("Err", "Error: " + error.getMessage());
-                //hideProgressDialog
+                loaderenabled();
             }
         }) {
 
