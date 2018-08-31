@@ -250,6 +250,7 @@ public class FullscreenActivity extends AppCompatActivity {
                 Intent claimbuttonactivity=new Intent(FullscreenActivity.this, RaiseClaimActivity.class);
                 claimbuttonactivity.putExtra("kartikey","isgreat");
                 startActivity(claimbuttonactivity);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
             }
         });
 
@@ -261,6 +262,7 @@ public class FullscreenActivity extends AppCompatActivity {
                 Intent accountactivity=new Intent(FullscreenActivity.this,Myaccountactivity.class);
                 accountactivity.putExtra("kartikey","isgreat");
                 startActivity(accountactivity);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
             }
         });
     }

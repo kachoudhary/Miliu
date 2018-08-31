@@ -190,6 +190,7 @@ public class RaiseClaimActivity extends AppCompatActivity {
                 Intent claimbuttonactivity=new Intent(RaiseClaimActivity.this, FullscreenActivity.class);
                 claimbuttonactivity.putExtra("kartikey","isgreat");
                 startActivity(claimbuttonactivity);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
             }
         });
 
@@ -201,6 +202,7 @@ public class RaiseClaimActivity extends AppCompatActivity {
                 Intent accountactivity=new Intent(RaiseClaimActivity.this,Myaccountactivity.class);
                 accountactivity.putExtra("kartikey","isgreat");
                 startActivity(accountactivity);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
             }
         });
     }
