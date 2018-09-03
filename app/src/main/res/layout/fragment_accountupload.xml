@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_border_linearlayout"
+    android:layout_marginTop="30dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginLeft="25dp"
+    android:layout_height="wrap_content"
+    tools:context=".View.Fragments.fragment_accountupload">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="#13346b"
+        android:textAlignment="viewStart"
+        android:layout_gravity="left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please upload the following documents to complete your claim" />
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textSize="14sp"
+        android:textColor="#13346b"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Scanned Copy of Driving License" />
+
+    <ImageView
+        android:id="@+id/scnddriviglicenseimg"
+        android:scaleType="fitXY"
+        android:background="@drawable/dotted_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textSize="14sp"
+        android:textColor="#13346b"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Scanned Copy of Police Report" />
+
+    <ImageView
+        android:id="@+id/scndpolicerprtimg"
+        android:scaleType="fitXY"
+        android:background="@drawable/dotted_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="150dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:text="Continue"
+            android:background="#13346b"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:gravity="center_vertical"
+            android:textColor="@color/cardview_light_background"
+            android:id="@+id/continuebtn" />
+        <View
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical" />
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:text="Clear All"
+            android:background="#13346b"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_gravity="right"
+            android:gravity="center_vertical"
+            android:textColor="@color/cardview_light_background"
+            android:id="@+id/clrbtn" />
+    </LinearLayout>
+
+
+</LinearLayout>

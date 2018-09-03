@@ -39,7 +39,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/fragment_images" />
+                    android:id="@+id/fragment_accountmain" />
          </LinearLayout>
          <LinearLayout
             android:layout_alignParentEnd="true"

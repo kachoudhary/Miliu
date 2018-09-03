@@ -4,11 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
+import com.wipro.miliu.View.Fragments.fragment_claimainpage;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -114,8 +115,15 @@ public class Myaccountactivity extends AppCompatActivity {
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
         homebutton =(TextView)findViewById(R.id.homebutton);
         claimbutton=(TextView)findViewById(R.id.claimbutton);
-
+        fragmentloading();
         footerloading();
+    }
+
+    private void fragmentloading() {
+       fragment_claimainpage accountmainpage=new fragment_claimainpage();
+        FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.fragment_accountmain,accountmainpage);
+        fragmentTransaction.commit();
     }
 
     @Override
